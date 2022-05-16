@@ -53,7 +53,7 @@ public class C04_Assertions {
         */
         String expectedUrl="https://www.facebook.com";
         String actualUrl=driver.getCurrentUrl();
-        Assert.assertEquals("Url beklenenden farkli",expectedUrl, actualUrl);
+        Assert.assertEquals(expectedUrl, actualUrl);
         /*
         Assert ile yaptigimiz testlerde assetion failed olursa kodlarin calismasi durur ve
         Assert classi bizi hata konusunda bilgilendirir.
