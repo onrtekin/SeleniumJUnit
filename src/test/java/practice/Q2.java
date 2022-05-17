@@ -38,7 +38,7 @@ public class Q2 {
         Assert.assertTrue("Title Best kelimesi icermiyor",driver.getTitle().contains("Best"));
     }
     @After
-    public void tearDown(){
+    public void testtenSonra(){
         driver.close();
     }
     @Test
@@ -53,6 +53,12 @@ public class Q2 {
         WebElement uLink=driver.findElement(By.xpath("//img[@alt='United States']"));
         WebElement mLink=driver.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(uLink));
         Assert.assertTrue(mLink.isDisplayed());
+
+    }
+    @AfterClass
+    public static void tearDown(){
+        driver.quit();
+
 
     }
 }
