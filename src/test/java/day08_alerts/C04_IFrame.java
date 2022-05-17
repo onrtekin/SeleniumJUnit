@@ -49,7 +49,11 @@ public class C04_IFrame {
         WebElement texKutusu=driver.findElement(By.xpath("//body[@id='tinymce']"));
         texKutusu.clear();
         texKutusu.sendKeys("Merhaba Dunya");
-        Thread.sleep(3000);
+       driver.switchTo().defaultContent();
+        WebElement linkYazizsi=driver.findElement(By.linkText("Elemental Selenium"));
+        Assert.assertTrue(linkYazizsi.isDisplayed());
+        System.out.println(linkYazizsi.getText());
+
 
 
     }
