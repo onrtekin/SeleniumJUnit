@@ -47,6 +47,7 @@ public class C05_DropDownOptions {
         // bu method bize WebElemet dondurur getText() yazilmali
         System.out.println(select.getFirstSelectedOption().getText());
         List<WebElement> optionList=select.getOptions();
+        System.out.println(optionList);
         int actualOptionSayisi=optionList.size();
         int expectedOptionSayisi=28;
         Assert.assertEquals(expectedOptionSayisi, actualOptionSayisi);
