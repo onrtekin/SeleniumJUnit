@@ -1,4 +1,4 @@
-package day08_alerts;
+package day08_alerts_iframe;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -35,7 +35,7 @@ public class C02_Alerts {
     }
     @AfterClass
     public  static  void tearDown(){
-      driver.quit();
+     driver.quit();
     }
     @Test
     public  void acceptAlert(){
