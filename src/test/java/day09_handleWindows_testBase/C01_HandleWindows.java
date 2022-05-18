@@ -17,12 +17,10 @@ public class C01_HandleWindows {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
     }
     @After
     public void tearDown() {
        driver.quit();
-
     }
     @Test
     public void test(){
@@ -38,10 +36,8 @@ public class C01_HandleWindows {
         WebElement ilkUrun=driver.findElement(By.xpath("//img[@alt='Nutella Chocolate Hazelnut Spread, Perfect Topping for Easter Treats, 35.2 oz Jar']"));
         driver.switchTo().newWindow(WindowType.TAB);
         /*
-        BU KOMUTU KULLANDİGİMİZDA DRİVER otomatik olarak new taba gecer
+        Bu komutu Kullandigimizda Driver otomatik olarak new taba gecer
         yeni tabda gorevi gerceklestirmek icin adimlari bastan almak gerekir
-
-
          */
         driver.get("https://www.amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Nutella"+ Keys.ENTER);
@@ -52,7 +48,6 @@ public class C01_HandleWindows {
         //ilk sayfaya gecip url i yazdiralim
         driver.switchTo().window(ilkSayfaDegeri);
         System.out.println(driver.getCurrentUrl());
-
         /*
         CDwindow-C560B50D7A50ED7C62E76F3AA052E093
         acilan sayfanin unique hash kodudur
@@ -62,7 +57,5 @@ public class C01_HandleWindows {
         driver.switchTo().window("CDwindow-C560B50D7A50ED7C62E76F3AA052E093");
         bu sekilde gecisi saglayabiliriz.
          */
-
-
     }
 }
