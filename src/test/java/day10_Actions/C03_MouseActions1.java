@@ -5,12 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
 import java.util.Set;
 
-public class MouseActions1 extends TestBase {
+public class C03_MouseActions1 extends TestBase {
     /*
     1- Yeni bir class olusturalim: MouseActions1
 2- https://the-internet.herokuapp.com/context_menu sitesine gidelim
