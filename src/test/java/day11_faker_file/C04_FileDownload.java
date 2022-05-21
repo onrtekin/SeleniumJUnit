@@ -18,11 +18,11 @@ public class C04_FileDownload extends TestBase {
         //3. dummy.txt dosyasını indirelim
         //4. dosyanın başarıyla indirilip indirilmediğini test edelim
         driver.get("https://the-internet.herokuapp.com/download");
-        driver.findElement(By.xpath("//*[text()='dummy.txt']")).click();
+        driver.findElement(By.xpath("//*[text()='text.txt']")).click();
         Thread.sleep(5000);
         //dosya downloads a indirilir
         String farkliKisim=System.getProperty("user.home");
-        String ortakKisim="\\Downloads\\dummy.txt";
+        String ortakKisim="\\Downloads\\text.txt";
         String dosyaYolu=farkliKisim+ortakKisim;
 
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
