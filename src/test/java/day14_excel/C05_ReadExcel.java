@@ -39,5 +39,7 @@ public class C05_ReadExcel {
             ulkelerMap.put(key,value);
         }
         System.out.println(ulkelerMap);
+        // Listede Ghana oldugunu test edelim
+        Assert.assertTrue(ulkelerMap.keySet().contains("Ghana"));
     }
 }
