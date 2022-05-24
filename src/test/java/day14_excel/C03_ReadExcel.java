@@ -29,7 +29,7 @@ public class C03_ReadExcel {
 
     }
 
-    private String banaDataGetir(int satirIndex, int sutunIndex) throws IOException {
+    public static String banaDataGetir(int satirIndex, int sutunIndex) throws IOException {
         String istenenData="";
         String dosyaYolu="src/resources/ulkeler.xlsx";
         FileInputStream fis=new FileInputStream(dosyaYolu);
