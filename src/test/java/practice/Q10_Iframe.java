@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Q10_Iframe  extends TestBase {
@@ -29,6 +31,13 @@ public class Q10_Iframe  extends TestBase {
        Thread.sleep(2000);
 
        driver.switchTo().parentFrame();
+
+       List<WebElement> textList=driver.findElements(By.xpath("//div[@class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded']"));
+       List<String> text=new ArrayList<>(Arrays.asList("1","2","3","4","5","6","7","8","9"));
+        for (int i = 0; i <textList.size() ; i++) {
+            textList.get(i).sendKeys(text.get(i));
+        }
+        driver.findElement(By.xpath("//button[@id='send']")).click();
 
 
     }
