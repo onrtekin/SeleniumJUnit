@@ -30,8 +30,8 @@ public class C04_ReadExcel {
 
 
         for (int i = 0; i <=sonSatir ; i++) {
-            satirdakiData=C03_ReadExcel.banaDataGetir(i,1);
-            System.out.println(satirdakiData);
+            satirdakiData=C03_ReadExcel.banaDataGetir(i,3);
+            System.out.println((i+1)+" : "+satirdakiData);
 
         }
     }
