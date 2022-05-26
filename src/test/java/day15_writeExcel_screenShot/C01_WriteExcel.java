@@ -23,26 +23,26 @@ public class C01_WriteExcel {
         workbook.getSheet("Sayfa1")
                 .getRow(0)
                 .createCell(4)
-                .setCellValue("Nufus");
+                .setCellValue("");
 
         // 6) 2.satir nufus kolonuna 1500000 yazdiralim
         workbook.getSheet("Sayfa1")
                 .getRow(1)
                 .createCell(4)
-                .setCellValue("1500000");
+                .setCellValue("");
 
 
        // 7) 10.satir nufus kolonuna 250000 yazdiralim
         workbook.getSheet("Sayfa1")
                 .getRow(9)
                 .createCell(4)
-                .setCellValue("250000");
+                .setCellValue("");
 
        // 8) 15.satir nufus kolonuna 54000 yazdiralim
         workbook.getSheet("Sayfa1")
                 .getRow(14)
                 .createCell(4)
-                .setCellValue("54000");
+                .setCellValue("");
        // 9) Dosyayi kaydedelim
         FileOutputStream fos=new FileOutputStream(dosyaYolu);
         workbook.write(fos);
